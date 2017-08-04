@@ -1,10 +1,11 @@
 <?php
-
-namespace STEE\Http\Controllers;
+namespace STEE\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+use STEE\Http\Controllers\Controller;
+
+class AdminController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,6 +24,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('backend.home');
+        return view('backend.admin');
     }
 }

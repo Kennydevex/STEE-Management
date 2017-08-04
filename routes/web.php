@@ -1,20 +1,12 @@
 <?php
-
 /*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
+*Route principal da aplicacao, aqui esta e redirecionamento para
+*o Frontend e para o Front end, e os demais url que provera o acesso
+*as paginas do sistema que pode ser acedido por quaisquer pessoas,
+*e claro desde que tenha a permissoes para tal.
 */
-
-Route::get('/', function () {
-    return view('frontend.welcome');
-});
+Route::get('/', 'Frontend\FrontController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'Backend\AdminController@index')->name('admin');
