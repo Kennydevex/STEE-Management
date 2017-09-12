@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => STEE\User::class,
+            'model' => User::class,
         ],
 
         // 'users' => [

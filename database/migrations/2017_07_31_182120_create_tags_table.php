@@ -7,23 +7,26 @@ use Illuminate\Database\Migrations\Migration;
 class CreateTagsTable extends Migration
 {
     /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    * Run the migrations.
+    *
+    * @return void
+    */
     public function up()
     {
         Schema::create('tags', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name', 30)->unique();
+            $table->text('description', 500);
+            $table->rememberToken();
             $table->timestamps();
         });
     }
 
     /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    * Reverse the migrations.
+    *
+    * @return void
+    */
     public function down()
     {
         Schema::dropIfExists('tags');

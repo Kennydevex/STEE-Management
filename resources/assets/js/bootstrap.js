@@ -11,6 +11,12 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('materialize-css');
+    // Esta inclsao do jquery-ui não esta a funcionar muito bem, temos de rever esta parte
+    require('jquery-ui');
+
+    require('alertify-js');
+
+    // require('collapsible.js');
     //require('bootstrap-sass');
 } catch (e) {}
 

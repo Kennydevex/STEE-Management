@@ -7,23 +7,33 @@ use Illuminate\Database\Migrations\Migration;
 class CreateArticlesTable extends Migration
 {
     /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    * Run the migrations.
+    *
+    * @return void
+    */
     public function up()
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title', 100)->unique();
+            $table->text('content', 500);
+            $table->integer('user_id')->unsigned();
+            $table->integer('category_id')->unsigned();
+            $table->rememberToken();
             $table->timestamps();
+            // Relacionamentos
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+
+
         });
     }
 
     /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    * Reverse the migrations.
+    *
+    * @return void
+    */
     public function down()
     {
         Schema::dropIfExists('articles');

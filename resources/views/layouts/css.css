@@ -1,0 +1,54 @@
+.stee-header, .stee-main, .stee-navegation, .stee-navegation-head{
+    margin: 0;
+    /*padding: 0;*/
+
+    width: 100%;
+}
+
+.stee-side-nav, .stee-container{
+    position: absolute;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-top: 20px;
+    height: 100%;
+}
+
+.stee-side-nav{
+    width: 0;
+}
+
+.stee-container{
+    left: 0;
+    padding: 10px;
+    width: 100%;
+}
+
+/*====================================================*/
+.vertical-menu {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    word-wrap:normal;
+    border: 0;box-shadow: 0;
+}
+
+.vertical-menu a {
+    background-color: #9e9e9e;
+    color: black;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+/*.vertical-menu a.active {
+color: white;
+}*/
+/*====================================================*/
+
+
+
+</style>

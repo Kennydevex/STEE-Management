@@ -1,0 +1,36 @@
+$(document).ready(function() {
+      $('#toggle-side-nav-show').click(function(event) {
+          $(this).hide();
+          $('#toggle-side-nav-close').show();
+          // -------------------------------------------------------------------------------------
+          $('#stee-side-nav').animate({width: '20%'}, 700);
+          $('#stee-container').animate({left: '20%'}, 700);
+      });
+      
+      $('#toggle-side-nav-close').click(function(event) {
+          $(this).hide();
+          $('#toggle-side-nav-show').show();
+          // -------------------------------------------------------------------------------------
+          $('#stee-side-nav').animate({width: '0'}, 700);
+          $('#stee-container').animate({left: '0'}, 700);
+      });
+      
+      $('.button-collapse').sideNav({
+          menuWidth:100, // Default is 300
+          edge: 'left', // Choose the horizontal origin
+          closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+          draggable: true, // Choose whether you can drag to open on touch screens,
+          onOpen: function(el) { /* Do Stuff*/ },
+          onClose: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is closed
+      }
+  );
+  
+  $('.button-collapse').sideNav('hide');
+  $('.collapsible').collapsible();
+  
+  
+  $( "#accordion" ).accordion({
+      collapsible: true
+  });
+  
+});
