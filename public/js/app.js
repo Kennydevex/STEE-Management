@@ -2314,6 +2314,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -43491,48 +43505,61 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "row"
+  }, [_c('ul', {
+    staticClass: "collapsible",
+    attrs: {
+      "data-collapsible": "accordion"
+    }
+  }, [_c('li', [_c('div', {
+    staticClass: "collapsible-header active"
+  }, [_c('i', {
+    staticClass: "material-icons"
+  }, [_vm._v("filter_drama")]), _vm._v("Gestão de Utilizadores")]), _vm._v(" "), _c('div', {
+    staticClass: "collapsible-body white"
   }, [_c('div', {
-    staticClass: "col s12"
+    staticClass: "row"
   }, [_c('ul', {
     staticClass: "tabs",
     attrs: {
       "id": "tabs-swipe-demo"
     }
   }, [_c('li', {
-    staticClass: "tab col s3"
+    staticClass: "tab col s3 blue lighten-5"
   }, [_c('a', {
     attrs: {
-      "href": "#test-swipe-1"
+      "href": "#stee-user"
     }
-  }, [_vm._v("Test 1")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("UTILIZADORES")])]), _vm._v(" "), _c('li', {
     staticClass: "tab col s3"
   }, [_c('a', {
     staticClass: "active",
     attrs: {
-      "href": "#test-swipe-2"
+      "href": "#stee-role"
     }
-  }, [_vm._v("Test 2")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("PAPEIS")])]), _vm._v(" "), _c('li', {
     staticClass: "tab col s3"
   }, [_c('a', {
     attrs: {
-      "href": "#test-swipe-3"
+      "href": "#stee-permission"
     }
-  }, [_vm._v("Test 3")])])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("PERMISSÕES")])])]), _vm._v(" "), _c('div', {
     staticClass: "col s12 blue",
     attrs: {
-      "id": "test-swipe-1"
+      "id": "stee-user"
     }
-  }, [_vm._v("Test 1")]), _vm._v(" "), _c('div', {
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")])])]), _vm._v(" "), _c('div', {
     staticClass: "col s12 red",
     attrs: {
-      "id": "test-swipe-2"
+      "id": "stee-role"
     }
-  }, [_vm._v("Test 2")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("Second tab content")]), _vm._v(" "), _c('div', {
     staticClass: "col s12 green",
     attrs: {
-      "id": "test-swipe-3"
+      "id": "stee-permission"
     }
-  }, [_vm._v("Test 3")])])
+  }, [_vm._v("Third tab content")])])])])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {

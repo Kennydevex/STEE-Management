@@ -22,3 +22,14 @@ Route::get('/admin', 'Backend\AdminController@index')->name('admin');
 Route::namespace('Backend\NewsControllers')->prefix('news')->group(function () {
     Route::resource('/articles', 'ArticlesController', ['only' => ['index']]);
 });
+
+// ------------------------------------------------------------------------------------
+// -----------------------Ruteadores dos System----------------------------------------
+// ------------------------------------------------------------------------------------
+Route::namespace('Backend\SystemControllers')->middleware(['auth'])->prefix('admin')->group(function () {
+    Route::get('/users', 'UsersController@index')->name('users');
+
+    Route::get('user/profile', function () {
+        // Uses first & second Middleware
+    });
+});
