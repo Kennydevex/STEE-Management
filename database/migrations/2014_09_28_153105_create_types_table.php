@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTagsTable extends Migration
+class CreateTypesTable extends Migration
 {
     /**
     * Run the migrations.
@@ -13,14 +13,14 @@ class CreateTagsTable extends Migration
     */
     public function up()
     {
-        Schema::create('tags', function (Blueprint $table) {
+        Schema::create('types', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 30)->unique();
-            $table->text('description', 500);
+            $table->string('name', 100);
+            $table->emun('typeEntity', ['1', '2', '3'])->default('3');
             $table->timestamps();
         });
     }
-
+    
     /**
     * Reverse the migrations.
     *
@@ -28,6 +28,6 @@ class CreateTagsTable extends Migration
     */
     public function down()
     {
-        Schema::dropIfExists('tags');
+        Schema::dropIfExists('types');
     }
 }

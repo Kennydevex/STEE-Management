@@ -33,3 +33,11 @@ Route::namespace('Backend\SystemControllers')->middleware(['auth'])->prefix('adm
         // Uses first & second Middleware
     });
 });
+
+// ------------------------------------------------------------------------------------
+// -----------------------Ruteadores da Gestão ----------------------------------------
+// ------------------------------------------------------------------------------------
+Route::namespace('Backend\GestControllers')->middleware(['auth'])->prefix('gest')->group(function () {
+    //Route::get('/folks', 'FolksController@index')->name('folkss');
+
+});

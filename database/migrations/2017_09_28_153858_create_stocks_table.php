@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTagsTable extends Migration
+class CreateStocksTable extends Migration
 {
     /**
     * Run the migrations.
@@ -13,11 +13,14 @@ class CreateTagsTable extends Migration
     */
     public function up()
     {
-        Schema::create('tags', function (Blueprint $table) {
+        Schema::create('stocks', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 30)->unique();
-            $table->text('description', 500);
+            $table->integer('quantity');
+            $table->integer('materials_id')->unsined();
             $table->timestamps();
+
+            //Relacionamentos
+            $table->foreign('materials_id')->references('id')->on('materials')->onDelete('cascade');
         });
     }
 
@@ -28,6 +31,6 @@ class CreateTagsTable extends Migration
     */
     public function down()
     {
-        Schema::dropIfExists('tags');
+        Schema::dropIfExists('stocks');
     }
 }
