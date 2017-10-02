@@ -16,8 +16,8 @@ class CreateAbsenceWorkerTable extends Migration
         Schema::create('absence_worker', function (Blueprint $table) {
             $table->increments('id');
             // ===========================================
-            $table->integer('absence_id')->unsigened();
-            $table->integer('worker_id')->unsigened();
+            $table->integer('absence_id')->unsigned();
+            $table->integer('worker_id')->unsigned();
             // ===========================================
             $table->boolean('justified');
             $table->string('justificationDate')->nullable();

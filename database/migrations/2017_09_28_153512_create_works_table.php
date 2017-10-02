@@ -20,8 +20,8 @@ class CreateWorksTable extends Migration
             $table->date('beginning');
             $table->date('conclusion');
             $table->float('budget');
-            $table->integer('customers_id')->undifined();
-            $table->integer('types_id')->undifined();
+            $table->integer('customers_id')->unsigned();
+            $table->integer('types_id')->unsigned();
             $table->timestamps();
 
             // Relacionamentos

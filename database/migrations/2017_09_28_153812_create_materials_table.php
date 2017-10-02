@@ -21,7 +21,7 @@ class CreateMaterialsTable extends Migration
             //Esta parte refere ao estado de material quanto a sua aquisição, ou seja se foi fiado, pagado totalmente ou pagad parcialmente
             $table->enum('acquisitionStatus', ['1','2','3']);
             // ==================================
-            $table->integer('types_id');
+            $table->integer('types_id')->unsigned();
             // ==================================
             $table->timestamps();
 

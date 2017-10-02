@@ -14,7 +14,7 @@ class CreateFolksTable extends Migration
     public function up()
     {
         Schema::create('folks', function (Blueprint $table) {
-            $able->increments('id');
+            $table->increments('id');
             $table->string('firstName', 40);
             $table->string('lastName', 40);
             $table->string('nif', 15);

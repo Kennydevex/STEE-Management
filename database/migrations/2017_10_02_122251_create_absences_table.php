@@ -18,9 +18,9 @@ class CreateAbsencesTable extends Migration
             $table->string('name');
             //Tipos de faltas que pode estar relacionado ao trabalho
             // ====================================================
-            $table->integer('type_id')->unsigened();
+            $table->integer('types_id')->unsigned();
             // ====================================================
-            $table->inteder('salaryPercentage');
+            $table->integer('salaryPercentage');
             $table->text('description');
             $table->timestamps();
 
