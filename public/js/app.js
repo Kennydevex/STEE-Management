@@ -2324,15 +2324,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
         console.log('Component mounted.');
+    },
+
+
+    data: {
+        message: 'Hello Vue!'
     }
+
 });
 
 /***/ }),
@@ -43501,8 +43503,6 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "row"
   }, [_c('ul', {
@@ -43510,15 +43510,36 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "data-collapsible": "accordion"
     }
-  }, [_c('li', [_c('div', {
-    staticClass: "collapsible-header active"
-  }, [_c('i', {
-    staticClass: "material-icons"
-  }, [_vm._v("filter_drama")]), _vm._v("Gestão de Utilizadores")]), _vm._v(" "), _c('div', {
+  }, [_c('li', [_vm._m(0), _vm._v(" "), _c('div', {
     staticClass: "collapsible-body white"
   }, [_c('div', {
     staticClass: "row"
-  }, [_c('ul', {
+  }, [_vm._m(1), _vm._v(" "), _c('div', {
+    staticClass: "col s12 blue",
+    attrs: {
+      "id": "stee-user"
+    }
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('p', [_vm._v("@" + _vm._s(_vm.message) + " ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")])])]), _vm._v(" "), _c('div', {
+    staticClass: "col s12 red",
+    attrs: {
+      "id": "stee-role"
+    }
+  }, [_vm._v("Second tab content")]), _vm._v(" "), _c('div', {
+    staticClass: "col s12 green",
+    attrs: {
+      "id": "stee-permission"
+    }
+  }, [_vm._v("Third tab content")])])])])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "collapsible-header active"
+  }, [_c('i', {
+    staticClass: "material-icons"
+  }, [_vm._v("filter_drama")]), _vm._v("Gestão de Utilizadores")])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('ul', {
     staticClass: "tabs",
     attrs: {
       "id": "tabs-swipe-demo"
@@ -43542,24 +43563,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "href": "#stee-permission"
     }
-  }, [_vm._v("PERMISSÕES")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col s12 blue",
-    attrs: {
-      "id": "stee-user"
-    }
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col s12 red",
-    attrs: {
-      "id": "stee-role"
-    }
-  }, [_vm._v("Second tab content")]), _vm._v(" "), _c('div', {
-    staticClass: "col s12 green",
-    attrs: {
-      "id": "stee-permission"
-    }
-  }, [_vm._v("Third tab content")])])])])])])
+  }, [_vm._v("PERMISSÕES")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {

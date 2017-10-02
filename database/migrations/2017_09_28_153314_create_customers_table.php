@@ -7,23 +7,27 @@ use Illuminate\Database\Migrations\Migration;
 class CreateCustomersTable extends Migration
 {
     /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    * Run the migrations.
+    *
+    * @return void
+    */
     public function up()
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->increments('id');
+            // ========================================
+            $table->integer('contributors_id')->unsigned();
+            $table->integer('type_id')->unsigned();
+            // ========================================
             $table->timestamps();
         });
     }
 
     /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    * Reverse the migrations.
+    *
+    * @return void
+    */
     public function down()
     {
         Schema::dropIfExists('customers');

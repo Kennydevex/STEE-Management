@@ -15,6 +15,14 @@ class CreateMaterialsTable extends Migration
     {
         Schema::create('materials', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name', 100);
+            $table->float('price');
+            $table->text('description');
+            //Esta parte refere ao estado de material quanto a sua aquisição, ou seja se foi fiado, pagado totalmente ou pagad parcialmente
+            $table->enum('acquisitionStatus', ['1','2','3']);
+            // ==================================
+            $table->integer('types_id');
+            // ==================================
             $table->timestamps();
         });
     }

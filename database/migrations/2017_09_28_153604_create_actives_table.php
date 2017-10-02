@@ -15,6 +15,10 @@ class CreateActivesTable extends Migration
     {
         Schema::create('actives', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name', 100);
+            $table->float('value');
+            $table->date('acquisition');
+            $table->text('desciption');
             $table->timestamps();
         });
     }

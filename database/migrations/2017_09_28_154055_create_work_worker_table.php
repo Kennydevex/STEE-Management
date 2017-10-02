@@ -15,6 +15,14 @@ class CreateWorkWorkerTable extends Migration
     {
         Schema::create('work_worker', function (Blueprint $table) {
             $table->increments('id');
+            // =========================================
+            $table->integer('workers_id')->unsigned();
+            $table->integer('works_id')->unsigned();
+            // =========================================
+            $table->date('start');
+            $table->date('end');
+            //Esta parte esta a refirir se o trabalhador foi ao trabalho ou nao
+            $table->boolean('status');
             $table->timestamps();
         });
     }

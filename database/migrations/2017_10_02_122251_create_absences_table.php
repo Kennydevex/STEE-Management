@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFixedCostsTable extends Migration
+class CreateAbsencesTable extends Migration
 {
     /**
     * Run the migrations.
@@ -13,10 +13,14 @@ class CreateFixedCostsTable extends Migration
     */
     public function up()
     {
-        Schema::create('fixedCosts', function (Blueprint $table) {
+        Schema::create('absences', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->float('value');
+            //Tipos de faltas que pode estar relacionado ao trabalho
+            // ====================================================
+            $table->integer('type_id')->unsigened();
+            // ====================================================
+            $table->inteder('salaryPercentage');
             $table->text('description');
             $table->timestamps();
         });
@@ -29,6 +33,6 @@ class CreateFixedCostsTable extends Migration
     */
     public function down()
     {
-        Schema::dropIfExists('fixedCosts');
+        Schema::dropIfExists('absences');
     }
 }
