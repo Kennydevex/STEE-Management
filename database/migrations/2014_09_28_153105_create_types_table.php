@@ -16,11 +16,11 @@ class CreateTypesTable extends Migration
         Schema::create('types', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 100);
-            $table->emun('typeEntity', ['1', '2', '3'])->default('3');
+            $table->enum('typeEntity', ['1', '2', '3'])->default('3');
             $table->timestamps();
         });
     }
-    
+
     /**
     * Reverse the migrations.
     *

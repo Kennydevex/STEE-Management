@@ -20,7 +20,7 @@ class CreateMaterialWorkTable extends Migration
             $table->integer('works_id')->unsigned();
             // =========================================
             //Esta parte corresponde a tipo de transação de material, que pode ser 1 (Urgente) ou 2 (Para enviar depois de uma determinada data)
-            $table->enum('status', ['1', '2'])->default('1');
+            $table->enum('pending', ['1', '2'])->default('1');
             //Este atributo ira armazenar o estado da transação, ou seja, se o material foi relamente enviado ou se esta por enviar.
             $table->boolean('status');
             $table->timestamps();
