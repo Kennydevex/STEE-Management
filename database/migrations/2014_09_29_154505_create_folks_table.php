@@ -23,11 +23,10 @@ class CreateFolksTable extends Migration
             $table->enum('gender', ['1', '2', '3'])->default('3');
             $table->date('birthDate');
             $table->string('photo', 60)->default('default.png');
-            $table->rememberToken();
             $table->timestamps();
         });
     }
-    
+
     /**
     * Reverse the migrations.
     *

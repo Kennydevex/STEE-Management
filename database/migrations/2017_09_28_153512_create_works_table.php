@@ -20,12 +20,16 @@ class CreateWorksTable extends Migration
             $table->date('beginning');
             $table->date('conclusion');
             $table->float('budget');
-            $table->integer('custumers_id')->undifined();
+            $table->integer('customers_id')->undifined();
             $table->integer('types_id')->undifined();
             $table->timestamps();
+
+            // Relacionamentos
+            $table->foreign('customers_id')->references('id')->on('customers')->onDelete('cascade');
+            $table->foreign('types_id')->references('id')->on('types')->onDelete('cascade');
         });
     }
-    
+
     /**
     * Reverse the migrations.
     *

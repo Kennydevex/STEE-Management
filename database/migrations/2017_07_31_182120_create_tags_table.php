@@ -17,7 +17,6 @@ class CreateTagsTable extends Migration
             $table->increments('id');
             $table->string('name', 30)->unique();
             $table->text('description', 500);
-            $table->rememberToken();
             $table->timestamps();
         });
     }

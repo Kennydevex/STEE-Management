@@ -19,7 +19,6 @@ class CreateArticlesTable extends Migration
             $table->text('content', 500);
             $table->integer('user_id')->unsigned();
             $table->integer('category_id')->unsigned();
-            $table->rememberToken();
             $table->timestamps();
             // Relacionamentos
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

@@ -23,6 +23,10 @@ class CreateAbsenceWorkerTable extends Migration
             $table->string('justificationDate')->nullable();
             $table->string('attachment')->nullable();
             $table->timestamps();
+
+            //Relacionamentos
+            $table->foreign('absence_id')->references('id')->on('absences')->onDelete('cascade');
+            $table->foreign('worker_id')->references('id')->on('workers')->onDelete('cascade');
         });
     }
 

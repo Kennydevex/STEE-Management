@@ -17,7 +17,6 @@ class CreateCategoriesTable extends Migration
             $table->increments('id');
             $table->string('name', 60)->unique();
             $table->text('description', 500);
-            $table->rememberToken();
             $table->timestamps();
         });
     }

@@ -16,10 +16,14 @@ class CreateCustomersTable extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->increments('id');
             // ========================================
-            $table->integer('contributors_id')->unsigned();
-            $table->integer('type_id')->unsigned();
+            $table->integer('folks_id')->unsigned();
+            $table->integer('types_id')->unsigned();
             // ========================================
             $table->timestamps();
+
+            //Relacionamentos
+            $table->foreign('folks_id')->references('id')->on('folks')->onDelete('cascade');
+            $table->foreign('types_id')->references('id')->on('types')->onDelete('cascade');
         });
     }
 

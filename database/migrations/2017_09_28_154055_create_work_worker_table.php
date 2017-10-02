@@ -24,6 +24,10 @@ class CreateWorkWorkerTable extends Migration
             //Esta parte esta a refirir se o trabalhador foi ao trabalho ou nao
             $table->boolean('status');
             $table->timestamps();
+
+            //Relacionamentos
+            $table->foreign('workers_id')->references('id')->on('workers')->onDelete('cascade');
+            $table->foreign('works_id')->references('id')->on('works')->onDelete('cascade');
         });
     }
 

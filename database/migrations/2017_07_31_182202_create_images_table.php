@@ -17,7 +17,6 @@ class CreateImagesTable extends Migration
             $table->increments('id');
             $table->string('name', 60)->unique();
             $table->integer('article_id')->unsigned();
-            $table->rememberToken();
             $table->timestamps();
             // Relecionamento
             $table->foreign('article_id')->references('id')->on('articles')->onDelete('cascade');

@@ -20,6 +20,10 @@ class CreateFixedCostWorkTable extends Migration
             $table->integer('fixedCosts_id')->unsigned();
             // =========================================
             $table->timestamps();
+
+            //Relacionamentos
+            $table->foreign('works_id')->references('id')->on('works')->onDelete('cascade');
+            $table->foreign('fixedCosts_id')->references('id')->on('fixedCosts')->onDelete('cascade');
         });
     }
 

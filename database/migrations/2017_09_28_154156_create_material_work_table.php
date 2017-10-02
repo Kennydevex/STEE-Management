@@ -16,7 +16,7 @@ class CreateMaterialWorkTable extends Migration
         Schema::create('material_work', function (Blueprint $table) {
             $table->increments('id');
             // =========================================
-            $table->integer('material_id')->unsigned();
+            $table->integer('materials_id')->unsigned();
             $table->integer('works_id')->unsigned();
             // =========================================
             //Esta parte corresponde a tipo de transação de material, que pode ser 1 (Urgente) ou 2 (Para enviar depois de uma determinada data)
@@ -24,6 +24,10 @@ class CreateMaterialWorkTable extends Migration
             //Este atributo ira armazenar o estado da transação, ou seja, se o material foi relamente enviado ou se esta por enviar.
             $table->boolean('status');
             $table->timestamps();
+
+            //Relacionamentos
+            $table->foreign('works_id')->references('id')->on('works')->onDelete('cascade');
+            $table->foreign('materials_id')->references('id')->on('materials')->onDelete('cascade');
         });
     }
 

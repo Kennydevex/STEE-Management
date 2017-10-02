@@ -23,6 +23,9 @@ class CreateAbsencesTable extends Migration
             $table->inteder('salaryPercentage');
             $table->text('description');
             $table->timestamps();
+
+            //Relacionamentos
+            $table->foreign('types_id')->references('id')->on('types')->onDelete('cascade');
         });
     }
 
