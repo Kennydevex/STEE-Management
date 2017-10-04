@@ -7,5 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Attribution extends Model
 {
-    //
+  protected $guarded = ['id'];
+
+  protected $table = 'material_work';
+  // ==================Relacionamento============================
+    public function works()
+    {
+      return $this->hasMany(Work::class);
+    }
+
+    public function materials()
+    {
+      return $this->hasMany(Material::class);
+    }
 }

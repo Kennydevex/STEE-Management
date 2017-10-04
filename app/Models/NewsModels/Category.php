@@ -6,8 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
+
+    protected $guarded = ['id'];
+
     public function articles()
     {
-      return $this->hasMany(articles::class);
+        return $this->hasMany(Articles::class);
     }
 }

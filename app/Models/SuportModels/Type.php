@@ -8,9 +8,23 @@ class Type extends Model
 {
     protected $guarded = ['id'];
 
-    public function user()
+    public function materials()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Material::class);
     }
 
+    public function customers()
+    {
+        return $this->belongsTo(Customer::class);
+    }
+
+    public function workers()
+    {
+        return $this->belongsTo(Worker::class);
+    }
+
+    public function works()
+    {
+        return $this->belongsTo(Work::class);
+    }
 }

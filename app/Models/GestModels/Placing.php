@@ -7,5 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Placing extends Model
 {
-    //
+  protected $guarded = ['id'];
+
+  protected $table = 'work_worker';
+  
+  public function works()
+  {
+    return $this->hasMany(Work::class);
+  }
+
+  public function workers()
+  {
+    return $this->hasMany(Worker::class);
+  }
 }
