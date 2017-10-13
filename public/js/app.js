@@ -5234,7 +5234,7 @@ $.widget = function( name, base, prototype ) {
 	} );
 	constructor.prototype = $.widget.extend( basePrototype, {
 
-		// TODO: remove support for widgetEventPrefix
+		// TODO:0 remove support for widgetEventPrefix id:11 gh:13
 		// always use the name + a colon as the prefix, e.g., draggable:start
 		// don't prefix for widgets that aren't DOM-based
 		widgetEventPrefix: existingConstructor ? ( basePrototype.widgetEventPrefix || name ) : name
@@ -6623,7 +6623,7 @@ function Sizzle( selector, context, results, seed ) {
 						if ( (elem = context.getElementById( m )) ) {
 
 							// Support: IE, Opera, Webkit
-							// TODO: identify versions
+							// TODO:0 identify versions id:14 gh:16
 							// getElementById can match elements by name instead of ID
 							if ( elem.id === m ) {
 								results.push( elem );
@@ -6637,7 +6637,7 @@ function Sizzle( selector, context, results, seed ) {
 					} else {
 
 						// Support: IE, Opera, Webkit
-						// TODO: identify versions
+						// TODO:0 identify versions id:16 gh:18
 						// getElementById can match elements by name instead of ID
 						if ( newContext && (elem = newContext.getElementById( m )) &&
 							contains( context, elem ) &&
@@ -8397,7 +8397,7 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 			matchedCount += i;
 
 			// Apply set filters to unmatched elements
-			// NOTE: This can be skipped if there are no unmatched elements (i.e., `matchedCount`
+			// NOTE:0 This can be skipped if there are no unmatched elements (i.e., `matchedCount` id:10 gh:12
 			// equals `i`), unless we didn't visit _any_ elements in the above loop because we have
 			// no element matchers and no seed.
 			// Incrementing an initially-string "0" `i` allows `i` to remain a string only in that
@@ -10090,7 +10090,7 @@ jQuery.extend( {
 		dataUser.remove( elem, name );
 	},
 
-	// TODO: Now that all calls to _data and _removeData have been replaced
+	// TODO:0 Now that all calls to _data and _removeData have been replaced id:12 gh:14
 	// with direct calls to dataPriv methods, these can be deprecated.
 	_data: function( elem, name, data ) {
 		return dataPriv.access( elem, name, data );
@@ -35878,7 +35878,7 @@ if (Vel) {
 
         // Initialize Tabs Content.
         if (options.swipeable) {
-          // TODO: Duplicate calls with swipeable? handle multiple div wrapping.
+          // TODO:0 Duplicate calls with swipeable? handle multiple div wrapping. id:15 gh:17
           $links.each(function () {
             var $curr_content = $(Materialize.escapeHash(this.hash));
             $curr_content.addClass('carousel-item');
@@ -42496,7 +42496,7 @@ if (Vel) {
     init: function (options) {
       var defaults = {
         duration: 200, // ms
-        dist: -100, // zoom scale TODO: make this more intuitive as an option
+        dist: -100, // zoom scale TODO:0 make this more intuitive as an option id:17 gh:19
         shift: 0, // spacing for center image
         padding: 0, // Padding between non center items
         fullWidth: false, // Change to full width styles
@@ -48258,7 +48258,7 @@ function initGlobalAPI (Vue) {
   Object.defineProperty(Vue, 'config', configDef);
 
   // exposed util methods.
-  // NOTE: these are not considered part of the public API - avoid relying on
+  // NOTE:0 these are not considered part of the public API - avoid relying on id:13 gh:15
   // them unless you are aware of the risk.
   Vue.util = {
     warn: warn,
