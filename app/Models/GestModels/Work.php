@@ -48,4 +48,5 @@ class Work extends Model
   {
     return $this->belongsTo(Transation::class);
   }
+
 }

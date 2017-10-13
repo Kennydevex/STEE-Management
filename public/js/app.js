@@ -2324,17 +2324,56 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
         console.log('Component mounted.');
-    },
-
-
-    data: {
-        message: 'Hello Vue!'
     }
-
 });
 
 /***/ }),
@@ -5193,7 +5232,7 @@ $.widget = function( name, base, prototype ) {
 	} );
 	constructor.prototype = $.widget.extend( basePrototype, {
 
-		// TODO: remove support for widgetEventPrefix
+		
 		// always use the name + a colon as the prefix, e.g., draggable:start
 		// don't prefix for widgets that aren't DOM-based
 		widgetEventPrefix: existingConstructor ? ( basePrototype.widgetEventPrefix || name ) : name
@@ -6582,7 +6621,7 @@ function Sizzle( selector, context, results, seed ) {
 						if ( (elem = context.getElementById( m )) ) {
 
 							// Support: IE, Opera, Webkit
-							// TODO: identify versions
+							
 							// getElementById can match elements by name instead of ID
 							if ( elem.id === m ) {
 								results.push( elem );
@@ -6596,7 +6635,7 @@ function Sizzle( selector, context, results, seed ) {
 					} else {
 
 						// Support: IE, Opera, Webkit
-						// TODO: identify versions
+						
 						// getElementById can match elements by name instead of ID
 						if ( newContext && (elem = newContext.getElementById( m )) &&
 							contains( context, elem ) &&
@@ -8356,8 +8395,8 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 			matchedCount += i;
 
 			// Apply set filters to unmatched elements
-			// NOTE: This can be skipped if there are no unmatched elements (i.e., `matchedCount`
-			// equals `i`), unless we didn't visit _any_ elements in the above loop because we have
+			
+	// equals `i`), unless we didn't visit _any_ elements in the above loop because we have
 			// no element matchers and no seed.
 			// Incrementing an initially-string "0" `i` allows `i` to remain a string only in that
 			// case, which will result in a "00" `matchedCount` that differs from `i` but is also
@@ -10049,7 +10088,7 @@ jQuery.extend( {
 		dataUser.remove( elem, name );
 	},
 
-	// TODO: Now that all calls to _data and _removeData have been replaced
+	
 	// with direct calls to dataPriv methods, these can be deprecated.
 	_data: function( elem, name, data ) {
 		return dataPriv.access( elem, name, data );
@@ -35837,7 +35876,7 @@ if (Vel) {
 
         // Initialize Tabs Content.
         if (options.swipeable) {
-          // TODO: Duplicate calls with swipeable? handle multiple div wrapping.
+          
           $links.each(function () {
             var $curr_content = $(Materialize.escapeHash(this.hash));
             $curr_content.addClass('carousel-item');
@@ -42455,7 +42494,7 @@ if (Vel) {
     init: function (options) {
       var defaults = {
         duration: 200, // ms
-        dist: -100, // zoom scale TODO: make this more intuitive as an option
+        dist: -100, 
         shift: 0, // spacing for center image
         padding: 0, // Padding between non center items
         fullWidth: false, // Change to full width styles
@@ -43503,6 +43542,8 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "row"
   }, [_c('ul', {
@@ -43510,50 +43551,27 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "data-collapsible": "accordion"
     }
-  }, [_c('li', [_vm._m(0), _vm._v(" "), _c('div', {
-    staticClass: "collapsible-body white"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_vm._m(1), _vm._v(" "), _c('div', {
-    staticClass: "col s12 blue",
-    attrs: {
-      "id": "stee-user"
-    }
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('p', [_vm._v("@" + _vm._s(_vm.message) + " ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col s12 red",
-    attrs: {
-      "id": "stee-role"
-    }
-  }, [_vm._v("Second tab content")]), _vm._v(" "), _c('div', {
-    staticClass: "col s12 green",
-    attrs: {
-      "id": "stee-permission"
-    }
-  }, [_vm._v("Third tab content")])])])])])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  }, [_c('li', [_c('div', {
     staticClass: "collapsible-header active"
   }, [_c('i', {
     staticClass: "material-icons"
-  }, [_vm._v("filter_drama")]), _vm._v("Gestão de Utilizadores")])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('ul', {
+  }, [_vm._v("filter_drama")]), _vm._v("Gestao de Utilizadores")]), _vm._v(" "), _c('div', {
+    staticClass: "collapsible-body stee-components-container white"
+  }, [_c('ul', {
     staticClass: "tabs",
     attrs: {
       "id": "tabs-swipe-demo"
     }
   }, [_c('li', {
-    staticClass: "tab col s3 blue lighten-5"
+    staticClass: "tab col s3"
   }, [_c('a', {
+    staticClass: "active",
     attrs: {
       "href": "#stee-user"
     }
   }, [_vm._v("UTILIZADORES")])]), _vm._v(" "), _c('li', {
     staticClass: "tab col s3"
   }, [_c('a', {
-    staticClass: "active",
     attrs: {
       "href": "#stee-role"
     }
@@ -43563,7 +43581,50 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "href": "#stee-permission"
     }
-  }, [_vm._v("PERMISSÕES")])])])
+  }, [_vm._v("PERMISSOES")])])]), _vm._v(" "), _c('div', {
+    staticClass: "col s12 white stee-tabs-container",
+    attrs: {
+      "id": "stee-user"
+    }
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "fixed-action-btn horizontal click-to-toggle"
+  }, [_c('a', {
+    staticClass: "btn-floating btn-large blue"
+  }, [_c('i', {
+    staticClass: "material-icons"
+  }, [_vm._v("menu")])]), _vm._v(" "), _c('ul', [_c('li', [_c('a', {
+    staticClass: "btn-floating red"
+  }, [_c('i', {
+    staticClass: "material-icons"
+  }, [_vm._v("insert_chart")])])]), _vm._v(" "), _c('li', [_c('a', {
+    staticClass: "btn-floating yellow darken-1"
+  }, [_c('i', {
+    staticClass: "material-icons"
+  }, [_vm._v("format_quote")])])]), _vm._v(" "), _c('li', [_c('a', {
+    staticClass: "btn-floating green"
+  }, [_c('i', {
+    staticClass: "material-icons"
+  }, [_vm._v("publish")])])]), _vm._v(" "), _c('li', [_c('a', {
+    staticClass: "btn-floating blue"
+  }, [_c('i', {
+    staticClass: "material-icons"
+  }, [_vm._v("attach_file")])])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "row"
+  }, [_c('table', {
+    staticClass: "highlight responsive-table"
+  }, [_c('thead', [_c('tr', [_c('th', [_vm._v("Name")]), _vm._v(" "), _c('th', [_vm._v("Item Name")]), _vm._v(" "), _c('th', [_vm._v("Item Price")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Alvin")]), _vm._v(" "), _c('td', [_vm._v("Eclair")]), _vm._v(" "), _c('td', [_vm._v("$0.87")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Alan")]), _vm._v(" "), _c('td', [_vm._v("Jellybean")]), _vm._v(" "), _c('td', [_vm._v("$3.76")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Jonathan")]), _vm._v(" "), _c('td', [_vm._v("Lollipop")]), _vm._v(" "), _c('td', [_vm._v("$7.00")])])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "col s12 red",
+    attrs: {
+      "id": "stee-role"
+    }
+  }, [_vm._v("\n                    Test 2\n                ")]), _vm._v(" "), _c('div', {
+    staticClass: "col s12 green",
+    attrs: {
+      "id": "stee-permission"
+    }
+  }, [_vm._v("\n                    Test 3\n                ")])])])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -48195,7 +48256,7 @@ function initGlobalAPI (Vue) {
   Object.defineProperty(Vue, 'config', configDef);
 
   // exposed util methods.
-  // NOTE: these are not considered part of the public API - avoid relying on
+  
   // them unless you are aware of the risk.
   Vue.util = {
     warn: warn,

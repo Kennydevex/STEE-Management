@@ -8,6 +8,15 @@
 main{
   padding: 20px;
 }
+
+.stee-components-container{
+  padding: 0px;
+  overflow-y:visible;
+}
+
+.stee-tabs-container{
+  padding: 20px;
+}
 </style>
 
 @endpush

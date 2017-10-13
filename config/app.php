@@ -1,42 +1,42 @@
 <?php
 
 return [
- 
+
  'name' => env('APP_NAME', 'Laravel'),
- 
- 
+
+
  'env' => env('APP_ENV', 'production'),
- 
- 
+
+
  'debug' => env('APP_DEBUG', false),
- 
- 
+
+
  'url' => env('APP_URL', 'http://localhost'),
- 
- 
+
+
  'timezone' => 'UTC',
- 
+
  'locale' => 'pt',
- 
- 
+
+
  'fallback_locale' => 'en',
- 
+
  'key' => env('APP_KEY'),
- 
+
  'cipher' => 'AES-256-CBC',
- 
+
  'log' => env('APP_LOG', 'single'),
- 
+
  'log_level' => env('APP_LOG_LEVEL', 'debug'),
- 
+
  'providers' => [
-  
+
   /*
   |--------------------------------------------------------------------------
   | Laravel Framework Service Providers...
   |--------------------------------------------------------------------------
   */
-  
+
   Illuminate\Auth\AuthServiceProvider::class,
   Illuminate\Broadcasting\BroadcastServiceProvider::class,
   Illuminate\Bus\BusServiceProvider::class,
@@ -59,12 +59,12 @@ return [
   Illuminate\Translation\TranslationServiceProvider::class,
   Illuminate\Validation\ValidationServiceProvider::class,
   Illuminate\View\ViewServiceProvider::class,
-  
+
   /*
   * Package Service Providers...
   */
   Laravel\Tinker\TinkerServiceProvider::class,
-  
+
   /*
   * Application Service Providers...
   */
@@ -73,7 +73,7 @@ return [
   // STEE\Providers\BroadcastServiceProvider::class,
   STEE\Providers\EventServiceProvider::class,
   STEE\Providers\RouteServiceProvider::class,
-  
+
   /*
   * STEE provider...
   */
@@ -81,16 +81,17 @@ return [
   Spatie\Permission\PermissionServiceProvider::class,
   //Este provider é o responsavel por gerir as alertas que aparecerão na aplicação
   odannyc\Alertify\AlertifyServiceProvider::class,
+  Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
  ],
- 
+
  /*
  |--------------------------------------------------------------------------
  | Class Aliases
  |--------------------------------------------------------------------------
  */
- 
+
  'aliases' => [
-  
+
   'App' => Illuminate\Support\Facades\App::class,
   'Artisan' => Illuminate\Support\Facades\Artisan::class,
   'Auth' => Illuminate\Support\Facades\Auth::class,
@@ -124,8 +125,8 @@ return [
   'URL' => Illuminate\Support\Facades\URL::class,
   'Validator' => Illuminate\Support\Facades\Validator::class,
   'View' => Illuminate\Support\Facades\View::class,
-  
-  
+
+
   /*
   |--------------------------------------------------------------------------
   | STEE Aliases
@@ -133,40 +134,44 @@ return [
   */
   // Este Alias é po responsavel por disponibilizar as alertas da aplicação
   'Alertify' => odannyc\Alertify\Alertify::class,
-  
+  'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
+  //'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
+
   /*
   |#########################################################################
   |###############################Class Models##############################
   |#########################################################################
   */
-  
-  
+
+
   /*
   |#########################################################################
   |#######################Content and articles Models#######################
   |#########################################################################
   */
-  
+
   'Article' => STEE\Models\NewsModels\Article::class,
   'Tag' => STEE\Models\NewsModels\Tag::class,
   'Category' => STEE\Models\NewsModels\Category::class,
   'Image' => STEE\Models\NewsModels\Image::class,
-  
+
   /*
   |#########################################################################
   |###############################System Models#############################
   |#########################################################################
   */
   'User' => STEE\Models\SystemModels\User::class,
-  
+
   /*
   |#########################################################################
   |########################STEE and Management Models#######################
   |#########################################################################
   */
+  'Absence' => STEE\Models\GestModels\Absence::class,
   'Active' => STEE\Models\GestModels\Active::class,
   'Attribution' => STEE\Models\GestModels\Attribution::class,
   'Customer' => STEE\Models\GestModels\Customer::class,
+  'Frequency' => STEE\Models\GestModels\Frequency::class,
   'FixedCost' => STEE\Models\GestModels\FixedCost::class,
   'Material' => STEE\Models\GestModels\Material::class,
   'Placing' => STEE\Models\GestModels\Placing::class,
@@ -174,7 +179,7 @@ return [
   'Transition' => STEE\Models\GestModels\Transition::class,
   'Work' => STEE\Models\GestModels\Work::class,
   'Worker' => STEE\Models\GestModels\Worker::class,
-  
+
   /*
   |#########################################################################
   |###############################Suport Models#############################
@@ -182,7 +187,7 @@ return [
   */
   'Folk' => STEE\Models\SuportModels\Folk::class,
   'Type' => STEE\Models\SuportModels\Active::class,
-  
+
  ],
- 
+
 ];

@@ -41,3 +41,11 @@ Route::namespace('Backend\GestControllers')->middleware(['auth'])->prefix('gest'
     //Route::get('/folks', 'FolksController@index')->name('folkss');
 
 });
+
+// ------------------------------------------------------------------------------------
+// ---------------------------------Api Routes ----------------------------------------
+// ------------------------------------------------------------------------------------
+Route::namespace('ApiControllers')->middleware(['auth'])->prefix('api/v1')->group(function () {
+    Route::resource('/users', '_UserApiController');
+
+});

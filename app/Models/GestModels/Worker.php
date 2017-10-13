@@ -29,6 +29,16 @@ class Worker extends Model
   {
     return $this->hasMany(Folk::class);
   }
-
+  
+  
+  public function absences()
+  {
+    return $this->belongsToMany(Absence::class);
+  }
+  
+  public function frequencies()
+  {
+    return $this->hasMany(Frequency::class);
+  }
 
 }
