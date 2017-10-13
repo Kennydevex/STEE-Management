@@ -11,6 +11,7 @@
         "laravel/tinker": "~1.0",
         "odannyc/laravel-alertify": "^1.0",
         "spatie/laravel-permission": "^2.6",
+        "suomato/laravel-vue-component-generator": "^1.0",
         "tymon/jwt-auth": "0.5.*"
     },
     "require-dev": {

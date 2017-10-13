@@ -16,3 +16,12 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::namespace('Backend\NewsControllers')->prefix('v1')->group(function () {
+// Route::namespace('Backend\NewsControllers')->group(function () {
+    Route::get('/categories', 'CategoriesController@index');
+    Route::post('/category', 'CategoriesController@store');
+    Route::put('/category/{id}', 'CategoriesController@edit');
+    Route::delete('/category/{id}', 'CategoriesController@delete');
+});
+

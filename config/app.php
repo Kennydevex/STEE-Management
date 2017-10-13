@@ -82,6 +82,8 @@ return [
   //Este provider é o responsavel por gerir as alertas que aparecerão na aplicação
   odannyc\Alertify\AlertifyServiceProvider::class,
   Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
+  //Complimento ra auxiliar na geração de componentes
+  Suomato\VueComponentGenerator\VueComponentGeneratorServiceProvider::class,
  ],
 
  /*
