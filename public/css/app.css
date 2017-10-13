@@ -2556,7 +2556,7 @@ textarea {
 
 /**
  * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ * NOTE:0 the default cannot safely be changed in Chrome and Safari on OS X. id:9 gh:11
  */
 
 optgroup {
